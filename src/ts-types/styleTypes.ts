@@ -5,3 +5,7 @@ export interface IStyle {
 }
 
 export interface GlobalStyleProps extends IStyle {}
+
+export interface INavbarStyle extends IStyle {
+  toggleIcon: boolean;
+}

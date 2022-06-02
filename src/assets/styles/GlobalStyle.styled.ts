@@ -15,7 +15,34 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 body {
     width: 100vw;
     font-size: 16px;
+    background: ${({ theme }) => theme.bgCol};
 }
+
+@keyframes slide-in {
+    from {
+      transform: translate(-100%, -100%);
+
+    }
+
+    to {
+      transform: translate(0%, 0%);
+
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translate(0%, 0%);
+
+    }
+
+    to {
+      transform: translate(-100%, -100%);
+
+    }
+
+
+  }
 `;
 
 export default GlobalStyle;
