@@ -4,7 +4,7 @@ import img from '../images/bg-img.svg';
 
 const HeroStyle = styled.section<IHeroStyle>`
   position: relative;
-  margin: 50px 0;
+  margin: 50px 0 0;
   padding: 1rem;
   width: 100%;
   min-height: 311px;
@@ -62,7 +62,11 @@ const HeroStyle = styled.section<IHeroStyle>`
   }
 
   @media (min-width: 1340px) {
-    margin: 50px;
+    margin: 50px 0 0 30px;
+
+    .hero__text-wrapper {
+      flex-basis: 60%;
+    }
   }
 `;
 

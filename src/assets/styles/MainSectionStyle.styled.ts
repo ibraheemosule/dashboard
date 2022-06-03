@@ -14,7 +14,7 @@ const MainSectionStyle = styled.article<IMainSectionStyle>`
   }
 
   @media (min-width: 1340px) {
-    margin: 0 19.5%;
+    margin: 0 15% 0 19.5%;
   }
 `;
 

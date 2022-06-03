@@ -5,3 +5,11 @@ export interface ILayout {
 }
 
 export interface INavbar {}
+
+export interface ICardWrapper {}
+
+export interface ICard {
+  total: number;
+  policy: number;
+  claim: number;
+}
