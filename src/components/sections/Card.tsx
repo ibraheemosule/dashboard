@@ -5,7 +5,8 @@ const Card: React.FC<ICard> = ({ total, policy, claim }) => {
   return (
     <CardStyle>
       <h1>
-        100<sup>$</sup>
+        {total}
+        <sup>$</sup>
       </h1>
       <p>Total Value of Disbursement</p>
       <div className="stat">

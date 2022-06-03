@@ -1,9 +1,10 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, lazy } from 'react';
 import { NavbarStyle } from '../../assets/styles/NavbarStyle.styled';
 import { INavbar } from '../../ts-types/componentTypes';
 import Logo from '../../assets/images/icons/Logo';
 import navList from '../../assets/utils/navList';
-import UserAvi from './UserAvi';
+
+const UserAvi = lazy(() => import('./UserAvi'));
 
 const Navbar: React.FC<INavbar> = () => {
   const [toggleIcon, setToggleIcon] = useState(false);

@@ -30,9 +30,8 @@ export const NavbarStyle = styled.nav<INavbarStyle>`
     background: inherit;
 
     .user-avi {
-      margin: 10px 0 50px -2rem;
+      margin: 0 0 50px -2rem;
       text-align: center;
-      display: none;
 
       h4 {
         margin: 7px 0;
@@ -197,7 +196,12 @@ export const NavbarStyle = styled.nav<INavbarStyle>`
       padding: 0 0 0;
 
       .user-avi {
-        display: block;
+        margin: 0 0 50px;
+        padding: 1rem;
+
+        button {
+          padding: 0.5rem 1rem;
+        }
       }
 
       li {
@@ -231,6 +235,15 @@ export const NavbarStyle = styled.nav<INavbarStyle>`
     }
 
     .list {
+      .user-avi {
+        margin: 10px 0 50px -2rem;
+        padding: 0;
+
+        button {
+          padding: 1rem 2rem;
+        }
+      }
+
       li {
         button {
           font-size: 1rem;
