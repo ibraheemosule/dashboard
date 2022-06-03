@@ -3,6 +3,7 @@ import { NavbarStyle } from '../../assets/styles/NavbarStyle.styled';
 import { INavbar } from '../../ts-types/componentTypes';
 import Logo from '../../assets/images/icons/Logo';
 import navList from '../../assets/utils/navList';
+import UserAvi from './UserAvi';
 
 const Navbar: React.FC<INavbar> = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
@@ -62,10 +63,11 @@ const Navbar: React.FC<INavbar> = () => {
         <Logo />
       </div>
       <section ref={section} className="list">
+        {window.innerWidth > 768 && <UserAvi />}
         <ul ref={ul}>
           {navList.map(({ Block, text }, i) => (
             <li key={text}>
-              <button id={i.toString()} onClick={(e) => activeState(e, i)}>
+              <button onClick={(e) => activeState(e, i)}>
                 <Block />
                 <span>{text}</span>
               </button>

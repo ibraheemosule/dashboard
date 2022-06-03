@@ -29,6 +29,52 @@ export const NavbarStyle = styled.nav<INavbarStyle>`
     animation: slide-out 0s 0s ease 1 forwards;
     background: inherit;
 
+    .user-avi {
+      margin: 10px 0 50px -2rem;
+      text-align: center;
+      display: none;
+
+      h4 {
+        margin: 7px 0;
+        color: rgba(136, 140, 183, 1);
+      }
+      small {
+        color: ${({ theme }) => theme.secCol};
+        font-size: 0.625rem;
+      }
+
+      p {
+        margin-top: 7px;
+        color: ${({ theme }) => theme.secCol};
+
+        span {
+          color: ${({ theme }) => theme.btnCol};
+          cursor: pointer;
+        }
+      }
+
+      button {
+        font-weight: 700;
+        padding: 1rem 2rem;
+        margin-top: 20px;
+        outline: none;
+        border: none;
+        background: ${({ theme }) => theme.btnCol};
+        color: #fff;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12);
+        border-radius: 7px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.99);
+        }
+
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+
     ul {
       list-style-type: none;
       padding-inline-start: 0;
@@ -148,7 +194,11 @@ export const NavbarStyle = styled.nav<INavbarStyle>`
       position: static;
       flex-direction: column;
       animation: none;
-      padding: 20vh 0 0;
+      padding: 0 0 0;
+
+      .user-avi {
+        display: block;
+      }
 
       li {
         display: block;
