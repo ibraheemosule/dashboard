@@ -8,6 +8,23 @@ const Navbar: React.FC<INavbar> = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
 
   const section = useRef<HTMLElement>(null);
+  const ul = useRef<HTMLUListElement>(null);
+  let element = useRef<any>(null);
+
+  const activeState = (e: any, i: number) => {
+    const btn = ul.current?.children[i].children[0];
+    if (!btn) return;
+    let el = element.current;
+    if (!el) {
+      el = btn;
+      el?.classList.add('active');
+      element.current = el;
+      return;
+    }
+    el.classList.remove('active');
+    btn.classList.add('active');
+    element.current = ul.current?.children[i].children[0];
+  };
 
   const toggleNav = useCallback(() => {
     if (window.innerWidth > 768) return;
@@ -15,7 +32,6 @@ const Navbar: React.FC<INavbar> = () => {
     setToggleIcon((toggle) => !toggle);
 
     const el = section.current!;
-    el.style.display = 'block';
     let li,
       time = 1;
     if (!el) return;
@@ -46,10 +62,10 @@ const Navbar: React.FC<INavbar> = () => {
         <Logo />
       </div>
       <section ref={section} className="list">
-        <ul>
-          {navList.map(({ Block, text }) => (
+        <ul ref={ul}>
+          {navList.map(({ Block, text }, i) => (
             <li key={text}>
-              <button>
+              <button id={i.toString()} onClick={(e) => activeState(e, i)}>
                 <Block />
                 <span>{text}</span>
               </button>

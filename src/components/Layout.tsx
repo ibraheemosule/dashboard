@@ -5,7 +5,7 @@ import Navbar from './sections/Navbar';
 const Layout: React.FC<ILayout> = ({ children }) => {
   return (
     <LayoutStyle>
-      <Navbar></Navbar>
+      <Navbar />
       {children}
     </LayoutStyle>
   );

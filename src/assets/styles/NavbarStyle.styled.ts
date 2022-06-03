@@ -59,10 +59,14 @@ export const NavbarStyle = styled.nav<INavbarStyle>`
             font-size: inherit;
             transition: all 0.3s ease-in;
           }
+
+          svg {
+            fill: hsla(207, 69%, 97%, 0.488);
+            transition: all 0.3s ease-in;
+          }
         }
-        svg {
-          fill: hsla(207, 69%, 97%, 0.488);
-          transition: all 0.3s ease-in;
+        .active {
+          color: ${({ theme: { btnCol } }) => btnCol};
         }
       }
     }
@@ -120,11 +124,12 @@ export const NavbarStyle = styled.nav<INavbarStyle>`
 
   @media (min-width: 768px) {
     height: 100vh;
+    max-height: 100vh;
+    width: 18.523%;
+    max-width: 306px;
     padding: 1rem 0 1rem 0.5rem;
     z-index: 1;
-    max-height: 100vh;
     flex-direction: column;
-    width: 18.523%;
     box-shadow: 10px 3px 15px rgba(0, 0, 0, 0.05);
     border-radius: 20px 0px 20px 20px;
 

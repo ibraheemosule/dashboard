@@ -9,3 +9,7 @@ export interface GlobalStyleProps extends IStyle {}
 export interface INavbarStyle extends IStyle {
   toggleIcon: boolean;
 }
+
+export interface IMainSectionStyle extends IStyle {}
+
+export interface ITopHeaderStyle extends IStyle {}
