@@ -6,17 +6,15 @@ import TopHeader from './sections/TopHeader';
 
 const UserAvi = lazy(() => import('./sections/UserAvi'));
 
-const MainSection: React.FC = () => {
-  return (
-    <>
-      <TopHeader />
-      <MainSectionStyle>
-        {window.innerWidth < 768 && <UserAvi />}
-        <HeroSection />
-        <CardWrapper />
-      </MainSectionStyle>
-    </>
-  );
-};
+const MainSection: React.FC = () => (
+  <>
+    <TopHeader />
+    <MainSectionStyle>
+      {window.innerWidth < 768 && <UserAvi />}
+      <HeroSection />
+      <CardWrapper />
+    </MainSectionStyle>
+  </>
+);
 
 export default MainSection;
