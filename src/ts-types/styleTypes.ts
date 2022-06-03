@@ -13,3 +13,5 @@ export interface INavbarStyle extends IStyle {
 export interface IMainSectionStyle extends IStyle {}
 
 export interface ITopHeaderStyle extends IStyle {}
+
+export interface IHeroStyle extends IStyle {}

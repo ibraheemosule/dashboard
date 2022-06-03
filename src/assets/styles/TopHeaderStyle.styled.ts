@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { ITopHeaderStyle } from '../../ts-types/styleTypes';
 
 const TopHeaderStyle = styled.aside<ITopHeaderStyle>`
+  position: relative;
+  top: 50px;
   padding: 1.5rem 3rem;
   background: #fff;
   box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 0px 20px 0px 0px;
 
   ul {
     display: flex;
@@ -42,6 +43,12 @@ const TopHeaderStyle = styled.aside<ITopHeaderStyle>`
         }
       }
     }
+  }
+
+  @media (min-width: 786px) {
+    position: static;
+    margin-left: 18.523%;
+    border-radius: 0px 20px 0px 0px;
   }
 `;
 
