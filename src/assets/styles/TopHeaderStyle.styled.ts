@@ -10,6 +10,7 @@ const TopHeaderStyle = styled.aside<ITopHeaderStyle>`
 
   ul {
     display: flex;
+    justify-content: center;
     list-style-type: none;
 
     li {
@@ -49,6 +50,10 @@ const TopHeaderStyle = styled.aside<ITopHeaderStyle>`
     position: static;
     margin-left: 18.523%;
     border-radius: 0px 20px 0px 0px;
+
+    ul {
+      justify-content: flex-start;
+    }
   }
 `;
 

@@ -1,13 +1,14 @@
-import { useState, useCallback, useRef, lazy } from 'react';
+import { useState, useCallback, useRef, useContext } from 'react';
 import { NavbarStyle } from '../../assets/styles/NavbarStyle.styled';
 import { INavbar } from '../../ts-types/componentTypes';
 import Logo from '../../assets/images/icons/Logo';
 import navList from '../../assets/utils/navList';
-
-const UserAvi = lazy(() => import('./UserAvi'));
+import UserAvi from './UserAvi';
+import { Context } from '../../assets/utils/Context';
 
 const Navbar: React.FC<INavbar> = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
+  const { stateToTriggerRerender } = useContext(Context);
 
   const section = useRef<HTMLElement>(null);
   const ul = useRef<HTMLUListElement>(null);
