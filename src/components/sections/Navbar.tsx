@@ -8,6 +8,7 @@ import { Context } from '../../assets/utils/Context';
 
 const Navbar: React.FC<INavbar> = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { stateToTriggerRerender } = useContext(Context);
 
   const section = useRef<HTMLElement>(null);

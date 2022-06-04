@@ -7,6 +7,7 @@ import { Context } from '../assets/utils/Context';
 import UserAvi from './sections/UserAvi';
 
 const MainSection: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { stateToTriggerRerender } = useContext(Context);
   return (
     <>
