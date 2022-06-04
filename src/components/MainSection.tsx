@@ -1,4 +1,4 @@
-import { lazy, useContext } from 'react';
+import { useContext } from 'react';
 import MainSectionStyle from '../assets/styles/MainSectionStyle.styled';
 import CardWrapper from './sections/CardWrapper';
 import HeroSection from './sections/HeroSection';
